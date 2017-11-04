@@ -13,12 +13,12 @@ var responsiveSlider = function() {
   });
 
   var prevSlide = function() {
-    if(count > 1) {
+    if (count > 1) {
       count = count - 2;
       slideList.style.left = "-" + count * sliderWidth + "px";
       count++;
     }
-    else if(count = 1) {
+    else if (count = 1) {
       count = items - 1;
       slideList.style.left = "-" + count * sliderWidth + "px";
       count++;
@@ -26,11 +26,11 @@ var responsiveSlider = function() {
   };
 
   var nextSlide = function() {
-    if(count < items) {
+    if (count < items) {
       slideList.style.left = "-" + count * sliderWidth + "px";
       count++;
     }
-    else if(count = items) {
+    else if (count = items) {
       slideList.style.left = "0px";
       count = 1;
     }
@@ -47,7 +47,6 @@ var responsiveSlider = function() {
   setInterval(function() {
     nextSlide()
   }, 8000);
-
 };
 
 window.onload = function() {
